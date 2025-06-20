@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init('mthtanjim@gmail.com'); // Replace with your ID
+    </script>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-teal-600 text-white p-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">TravelTrance</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-teal-200">Home</a>
+                <a href="#destinations" class="hover:text-teal-200">Destinations</a>
+                <a href="#calculator" class="hover:text-teal-200">Calculator</a>
+                <a href="#contact" class="hover:text-teal-200">Contact</a>
+            </div>
+            <button class="md:hidden text-xl">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1368&q=80')] bg-cover bg-center text-white relative">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="text-center z-10 px-4 zoom-in">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Discover Your Next Adventure</h1>
+            <p class="text-xl md:text-2xl mb-8">Tailored travel experiences just for you</p>
+            <a href="#destinations" class="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition">Explore Destinations</a>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+<!-- Destinations Section -->
+<section id="destinations" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 slide-left">Popular Destinations</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Destination 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500 group hover:shadow-xl">
+                <div class="overflow-hidden h-64">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Bali" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Bali, Indonesia</h3>
+                    <p class="text-gray-600 mb-4">Tropical paradise with lush landscapes.</p>
+                    <span class="text-amber-600 font-bold">From $899</span>
+                </div>
+            </div>
+
+            <!-- Destination 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500 group hover:shadow-xl">
+                <div class="overflow-hidden h-64">
+                    <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Paris" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Paris, France</h3>
+                    <p class="text-gray-600 mb-4">The romantic City of Lights.</p>
+                    <span class="text-amber-600 font-bold">From $1,299</span>
+                </div>
+            </div>
+
+            <!-- Destination 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500 group hover:shadow-xl">
+                <div class="overflow-hidden h-64">
+                    <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Tokyo" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Tokyo, Japan</h3>
+                    <p class="text-gray-600 mb-4">Futuristic city meets tradition.</p>
+                    <span class="text-amber-600 font-bold">From $1,499</span>
+                </div>
+            </div>
+
+            <!-- Destination 4 (New) -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500 group hover:shadow-xl">
+                <div class="overflow-hidden h-64">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="New York" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">New York, USA</h3>
+                    <p class="text-gray-600 mb-4">The city that never sleeps.</p>
+                    <span class="text-amber-600 font-bold">From $1,199</span>
+                </div>
+            </div>
+
+            <!-- Destination 5 (New) -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500 group hover:shadow-xl">
+                <div class="overflow-hidden h-64">
+                    <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Rome" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Rome, Italy</h3>
+                    <p class="text-gray-600 mb-4">Eternal city with ancient wonders.</p>
+                    <span class="text-amber-600 font-bold">From $1,099</span>
+                </div>
+            </div>
+
+            <!-- Destination 6 (New) -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500 group hover:shadow-xl">
+                <div class="overflow-hidden h-64">
+                    <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Sydney" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Sydney, Australia</h3>
+                    <p class="text-gray-600 mb-4">Stunning harbor and beaches.</p>
+                    <span class="text-amber-600 font-bold">From $1,599</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Trip Calculator -->
+    <section id="calculator" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 slide-in-left">Trip Cost Calculator</h2>
+            <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg zoom-in">
+                <form id="tripForm" class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Destination</label>
+                        <select id="destination" class="w-full p-3 border border-gray-300 rounded-lg">
+                            <option value="899">Bali, Indonesia</option>
+                            <option value="1299">Paris, France</option>
+                            <option value="1499">Tokyo, Japan</option>
+                            <option value="1199">New York, USA</option>
+                            <option value="1099">Rome, Italy</option>
+                            <option value="1599">Sydney, Australia</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Duration (Days)</label>
+                        <input type="number" id="duration" min="1" class="w-full p-3 border border-gray-300 rounded-lg" value="7">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Travelers</label>
+                        <input type="number" id="travelers" min="1" class="w-full p-3 border border-gray-300 rounded-lg" value="2">
+                    </div>
+                    <button type="button" onclick="calculateTrip()" class="w-full bg-teal-600 hover:bg-teal-700 text-white p-3 rounded-lg font-semibold transition">Calculate Cost</button>
+                </form>
+                <div id="tripResult" class="mt-6 text-center text-xl font-bold hidden">
+                    Estimated Cost: <span id="cost" class="text-teal-600">$0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-16 bg-teal-700 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 slide-in-left">Plan Your Trip</h2>
+            <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg text-gray-800 zoom-in">
+                <form id="contactForm" class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Destination Interest</label>
+                        <input type="text" id="destinationInterest" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Message</label>
+                        <textarea id="message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white p-3 rounded-lg font-semibold transition">Send Inquiry</button>
+                </form>
+                <div id="successMessage" class="mt-4 text-green-600 text-center hidden">Message sent successfully!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 VoyageEase Travel Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="scripts/calculator.js"></script>
+    <script src="scripts/form.js"></script>
+    <script src="scripts/animations.js"></script>
+</body>
+</html>
